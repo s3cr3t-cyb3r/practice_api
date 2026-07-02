@@ -4,4 +4,10 @@ class PersonsController < ApplicationController
 
         render json: persons
     end
+
+    def show
+        person = Person.find_by(id: params[:id])
+
+        render json: person
+    end
 end

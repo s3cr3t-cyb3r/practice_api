@@ -4,4 +4,9 @@ Rails.application.routes.draw do
   get '/dogs' => 'dogs#index'
   get '/teachers' => 'teachers#index'
   get '/students' => 'students#index'
+  get '/persons/:id' => 'persons#show'
+  get '/cats/:id' => 'cats#show'
+  get '/dogs/:id' => 'dogs#show'
+  get '/teachers/:id' => 'teachers#show'
+  get '/students/:id' => 'students#show'
 end
