@@ -10,4 +10,13 @@ class DogsController < ApplicationController
 
         render json: dog
     end
+
+    def create
+        dog = Dog.create(
+            breed: params[:breed],
+            color: params[:color]
+        )
+
+        render json: dog
+    end
 end

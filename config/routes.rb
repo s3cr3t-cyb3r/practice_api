@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   get '/dogs/:id' => 'dogs#show'
   get '/teachers/:id' => 'teachers#show'
   get '/students/:id' => 'students#show'
+  post '/persons' => 'persons#create'
+  post '/cats' => 'cats#create'
+  post '/dogs' => 'dogs#create'
+  post '/teachers' => 'teachers#create'
+  post '/students' => 'students#create'
 end

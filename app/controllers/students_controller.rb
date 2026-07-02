@@ -10,4 +10,13 @@ class StudentsController < ApplicationController
 
         render json: student
     end
+
+    def create
+        student = Student.create(
+            grade: params[:grade],
+            name: params[:name]
+        )
+
+        render json: student
+    end
 end

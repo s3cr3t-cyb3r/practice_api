@@ -10,4 +10,13 @@ class PersonsController < ApplicationController
 
         render json: person
     end
+
+    def create
+        person = Person.create(
+            name: params[:name],
+            age: params[:age]
+        )
+
+        render json: person
+    end 
 end

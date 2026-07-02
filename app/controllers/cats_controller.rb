@@ -10,4 +10,13 @@ class CatsController < ApplicationController
 
         render json: cat
     end
+
+    def create
+        cat = Cat.create(
+            breed: params[:breed],
+            color: params[:color]
+        )
+
+        render json: cat
+    end
 end
