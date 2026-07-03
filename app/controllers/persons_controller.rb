@@ -18,5 +18,16 @@ class PersonsController < ApplicationController
         )
 
         render json: person
-    end 
+    end
+
+    def update
+        person = Person.find_by(id: params[:id])
+
+        person.update(
+            name: params[:name] || person.name,
+            age: params[:age] || person.age
+        )
+
+        render json: person
+    end
 end

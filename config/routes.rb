@@ -14,4 +14,9 @@ Rails.application.routes.draw do
   post '/dogs' => 'dogs#create'
   post '/teachers' => 'teachers#create'
   post '/students' => 'students#create'
+  put '/persons/:id' => 'persons#update'
+  put '/cats/:id' => 'cats#update'
+  put '/dogs/:id' => 'dogs#update'
+  put '/teachers/:id' => 'teachers#update'
+  put '/students/:id' => 'students#update'
 end

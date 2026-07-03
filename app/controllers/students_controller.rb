@@ -19,4 +19,15 @@ class StudentsController < ApplicationController
 
         render json: student
     end
+
+    def update
+        student = Student.find_by(id: params[:id])
+
+        student.update(
+            grade: params[:grade],
+            name: params[:name]
+        )
+
+        render json: student
+    end
 end
