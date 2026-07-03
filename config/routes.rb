@@ -19,4 +19,9 @@ Rails.application.routes.draw do
   put '/dogs/:id' => 'dogs#update'
   put '/teachers/:id' => 'teachers#update'
   put '/students/:id' => 'students#update'
+  delete '/persons/:id' => 'persons#destroy'
+  delete '/cats/:id' => 'cats#destroy'
+  delete '/dogs/:id' => 'dogs#destroy'
+  delete '/teachers/:id' => 'teachers#destroy'
+  delete '/students/:id' => 'students#destroy'
 end

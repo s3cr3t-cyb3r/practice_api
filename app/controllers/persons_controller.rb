@@ -30,4 +30,12 @@ class PersonsController < ApplicationController
 
         render json: person
     end
+
+    def destroy
+        person = Person.find_by(id: params[:id])
+
+        person.destroy
+
+        render json: { message: "Deleted Successfully" }
+    end
 end

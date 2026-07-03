@@ -30,4 +30,12 @@ class CatsController < ApplicationController
 
         render json: cat
     end
+
+    def destroy
+        cat = Cat.find_by(id: params[:id])
+
+        cat.destroy
+
+        render json: { message: "Deleted Successfully" }
+    end
 end

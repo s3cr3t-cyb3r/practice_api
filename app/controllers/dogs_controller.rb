@@ -30,4 +30,12 @@ class DogsController < ApplicationController
 
         render json: dog
     end
+
+    def destroy
+        dog = Dog.find_by(id: params[:id])
+
+        dog.destroy
+
+        render json: { message: "Deleted Successfully" }
+    end
 end

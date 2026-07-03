@@ -30,4 +30,12 @@ class TeachersController < ApplicationController
 
         render json: teacher
     end
+
+    def destroy
+        teacher = Teacher.find_by(id: params[:id])
+
+        teacher.destroy
+
+        render json: { message: "Deleted Successfully" }
+    end
 end
